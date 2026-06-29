@@ -18,7 +18,7 @@ public class InventoryPage extends BasePage {
     public InventoryPage(Page page) {
         super(page);
         inventoryItems = page.locator(".inventory_item");
-        sortDropdown = page.locator("[data-test='product_sort_container']");
+        sortDropdown = page.locator(".product_sort_container");
         cartBadge = page.locator(".shopping_cart_badge");
         cartIcon = page.locator(".shopping_cart_link");
     }

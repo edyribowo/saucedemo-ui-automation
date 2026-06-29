@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.saucedemo.runner.TestRunner" time="73.494" tests="31" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/test-classes:/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/classes:/Users/edy/.m2/repository/com/microsoft/playwright/playwright/1.44.0/playwright-1.44.0.jar:/Users/edy/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/edy/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/edy/.m2/repository/com/microsoft/playwright/driver/1.44.0/driver-1.44.0.jar:/Users/edy/.m2/repository/com/microsoft/playwright/driver-bundle/1.44.0/driver-bundle-1.44.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-java/7.18.0/cucumber-java-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-core/7.18.0/cucumber-core-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-gherkin/7.18.0/cucumber-gherkin-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.18.0/cucumber-gherkin-messages-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/gherkin/28.0.0/gherkin-28.0.0.jar:/Users/edy/.m2/repository/io/cucumber/messages/24.1.0/messages-24.1.0.jar:/Users/edy/.m2/repository/io/cucumber/testng-xml-formatter/0.1.0/testng-xml-formatter-0.1.0.jar:/Users/edy/.m2/repository/io/cucumber/query/12.2.0/query-12.2.0.jar:/Users/edy/.m2/repository/io/cucumber/tag-expressions/6.1.0/tag-expressions-6.1.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-expressions/17.1.0/cucumber-expressions-17.1.0.jar:/Users/edy/.m2/repository/io/cucumber/datatable/7.18.0/datatable-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-plugin/7.18.0/cucumber-plugin-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/docstring/7.18.0/docstring-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/html-formatter/21.3.1/html-formatter-21.3.1.jar:/Users/edy/.m2/repository/io/cucumber/junit-xml-formatter/0.4.0/junit-xml-formatter-0.4.0.jar:/Users/edy/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/Users/edy/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.18.0/cucumber-junit-platform-engine-7.18.0.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/edy/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite/1.10.2/junit-platform-suite-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.2/junit-platform-suite-engine-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/edy/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/edy/.m2/repository/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/surefire/surefirebooter-20260629234446598_3.jar /Users/edy/.jenkins/workspace/Web UI Automation Creation/target/surefire 2026-06-29T23-44-46_542-jvmRun1 surefire-20260629234446598_1tmp surefire_0-20260629234446598_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/test-classes:/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/classes:/Users/edy/.m2/repository/com/microsoft/playwright/playwright/1.44.0/playwright-1.44.0.jar:/Users/edy/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/edy/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/edy/.m2/repository/com/microsoft/playwright/driver/1.44.0/driver-1.44.0.jar:/Users/edy/.m2/repository/com/microsoft/playwright/driver-bundle/1.44.0/driver-bundle-1.44.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-java/7.18.0/cucumber-java-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-core/7.18.0/cucumber-core-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-gherkin/7.18.0/cucumber-gherkin-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.18.0/cucumber-gherkin-messages-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/gherkin/28.0.0/gherkin-28.0.0.jar:/Users/edy/.m2/repository/io/cucumber/messages/24.1.0/messages-24.1.0.jar:/Users/edy/.m2/repository/io/cucumber/testng-xml-formatter/0.1.0/testng-xml-formatter-0.1.0.jar:/Users/edy/.m2/repository/io/cucumber/query/12.2.0/query-12.2.0.jar:/Users/edy/.m2/repository/io/cucumber/tag-expressions/6.1.0/tag-expressions-6.1.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-expressions/17.1.0/cucumber-expressions-17.1.0.jar:/Users/edy/.m2/repository/io/cucumber/datatable/7.18.0/datatable-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-plugin/7.18.0/cucumber-plugin-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/docstring/7.18.0/docstring-7.18.0.jar:/Users/edy/.m2/repository/io/cucumber/html-formatter/21.3.1/html-formatter-21.3.1.jar:/Users/edy/.m2/repository/io/cucumber/junit-xml-formatter/0.4.0/junit-xml-formatter-0.4.0.jar:/Users/edy/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/Users/edy/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/edy/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.18.0/cucumber-junit-platform-engine-7.18.0.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/edy/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite/1.10.2/junit-platform-suite-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.2/junit-platform-suite-engine-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/edy/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/edy/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/edy/.m2/repository/net/bytebuddy/byte-buddy/1.14.11/byte-buddy-1.14.11.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/edy"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation/target/surefire/surefirebooter-20260629234446598_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25"/>
+    <property name="user.name" value="edy"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.7.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/edy/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/4n/9phmpfzs7_b16s5syv8lt8cm0000gn/T/"/>
+    <property name="java.version" value="25"/>
+    <property name="user.dir" value="/Users/edy/.jenkins/workspace/Web UI Automation Creation"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/edy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="25"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="TC-AUTH-001 Successful login with valid credentials" classname="Authentication" time="3.087">
+    <system-out><![CDATA[
+@auth @smoke @positive
+Scenario: TC-AUTH-001 Successful login with valid credentials       &amp#27;[90m# features/authentication.feature:11&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be redirected to the inventory page&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToInventoryPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe product list should be displayed&amp#27;[0m                          &amp#27;[90m# com.saucedemo.steps.AuthSteps.theProductListShouldBeDisplayed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-002 Login with invalid password" classname="Authentication" time="1.571">
+    <system-out><![CDATA[
+@auth @negative
+Scenario: TC-AUTH-002 Login with invalid password                                                                 &amp#27;[90m# features/authentication.feature:18&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"wrongpassword"&amp#27;[0m                                              &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Username and password do not match any user in this service"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should remain on the login page&amp#27;[0m                                                                           &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldRemainOnLoginPage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-003 Login with invalid username" classname="Authentication" time="1.569">
+    <system-out><![CDATA[
+@auth @negative
+Scenario: TC-AUTH-003 Login with invalid username                                                                 &amp#27;[90m# features/authentication.feature:25&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m"unknown_user"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                                                &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Username and password do not match any user in this service"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-004 Login with empty username field" classname="Authentication" time="1.231">
+    <system-out><![CDATA[
+@auth @negative
+Scenario: TC-AUTH-004 Login with empty username field                      &amp#27;[90m# features/authentication.feature:31&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                     &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Username is required"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-005 Login with empty password field" classname="Authentication" time="1.458">
+    <system-out><![CDATA[
+@auth @negative
+Scenario: TC-AUTH-005 Login with empty password field                      &amp#27;[90m# features/authentication.feature:37&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Password is required"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-006 Login with both fields empty" classname="Authentication" time="2.459">
+    <system-out><![CDATA[
+@auth @negative @edge
+Scenario: TC-AUTH-006 Login with both fields empty                         &amp#27;[90m# features/authentication.feature:43&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                            &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Username is required"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-007 Login attempt with locked-out user" classname="Authentication" time="1.365">
+    <system-out><![CDATA[
+@auth @negative
+Scenario: TC-AUTH-007 Login attempt with locked-out user                                   &amp#27;[90m# features/authentication.feature:48&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter username &amp#27;[0m&amp#27;[32m&amp#27;[1m"locked_out_user"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                      &amp#27;[90m# com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Login button&amp#27;[0m                                                             &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickTheLoginButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: Sorry, this user has been locked out"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-008 Successful logout" classname="Authentication" time="2.797">
+    <system-out><![CDATA[
+@auth @positive
+Scenario: TC-AUTH-008 Successful logout                                &amp#27;[90m# features/authentication.feature:54&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                         &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open the navigation menu&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Logout&amp#27;[0m                                                   &amp#27;[90m# com.saucedemo.steps.AuthSteps.iClickLogout()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be redirected to the login page&amp#27;[0m                        &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToLoginPage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-AUTH-009 Access inventory page without authentication" classname="Authentication" time="1.456">
+    <system-out><![CDATA[
+@auth @negative @security
+Scenario: TC-AUTH-009 Access inventory page without authentication                                                 &amp#27;[90m# features/authentication.feature:61&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                                                                     &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am not logged in&amp#27;[0m                                                                                         &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmNotLoggedIn()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate directly to &amp#27;[0m&amp#27;[32m&amp#27;[1m"/inventory.html"&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iNavigateDirectlyTo(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be redirected to the login page&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToLoginPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Epic sadface: You can only access '/inventory.html' when you are logged in."&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-001 Add a single product to cart" classname="Shopping Cart" time="1.699">
+    <system-out><![CDATA[
+@cart @smoke @positive
+Scenario: TC-CART-001 Add a single product to cart                     &amp#27;[90m# features/cart.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI add &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                         &amp#27;[90m# com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart badge should show &amp#27;[0m&amp#27;[32m&amp#27;[1m"1"&amp#27;[0m                                  &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m button should change to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Remove"&amp#27;[0m       &amp#27;[90m# com.saucedemo.steps.CartSteps.theButtonShouldChangeTo(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-002 Add multiple products to cart" classname="Shopping Cart" time="2.004">
+    <system-out><![CDATA[
+@cart @positive
+Scenario: TC-CART-002 Add multiple products to cart                    &amp#27;[90m# features/cart.feature:18&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI add &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                         &amp#27;[90m# com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI add &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Bike Light"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                        &amp#27;[90m# com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the cart icon&amp#27;[0m                                            &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickTheCartIcon()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart page should show &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m items&amp#27;[0m                               &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartPageShouldShowItems(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe cart badge should show &amp#27;[0m&amp#27;[32m&amp#27;[1m"2"&amp#27;[0m                                   &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-003 Remove a product from the inventory page" classname="Shopping Cart" time="4.603">
+    <system-out><![CDATA[
+@cart @positive
+Scenario: TC-CART-003 Remove a product from the inventory page         &amp#27;[90m# features/cart.feature:26&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click Remove for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m on the inventory page&amp#27;[0m  &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickRemoveOnInventoryPage(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart badge should not be visible&amp#27;[0m                            &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m button should change to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Add to cart"&amp#27;[0m  &amp#27;[90m# com.saucedemo.steps.CartSteps.theButtonShouldChangeTo(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-004 Remove a product from the cart page" classname="Shopping Cart" time="1.864">
+    <system-out><![CDATA[
+@cart @positive
+Scenario: TC-CART-004 Remove a product from the cart page              &amp#27;[90m# features/cart.feature:33&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the cart icon&amp#27;[0m                                           &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickTheCartIcon()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI remove &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m from the cart page&amp#27;[0m                &amp#27;[90m# com.saucedemo.steps.CartSteps.iRemoveFromCartPage(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart should be empty&amp#27;[0m                                        &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartShouldBeEmpty()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-005 Continue shopping from cart page" classname="Shopping Cart" time="1.866">
+    <system-out><![CDATA[
+@cart @positive
+Scenario: TC-CART-005 Continue shopping from cart page                 &amp#27;[90m# features/cart.feature:40&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the cart icon&amp#27;[0m                                           &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickTheCartIcon()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue Shopping&amp#27;[0m                                        &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickContinueShopping()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the inventory page&amp#27;[0m                               &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe cart badge should show &amp#27;[0m&amp#27;[32m&amp#27;[1m"1"&amp#27;[0m                                   &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CART-006 View empty cart" classname="Shopping Cart" time="1.679">
+    <system-out><![CDATA[
+@cart @edge
+Scenario: TC-CART-006 View empty cart                                  &amp#27;[90m# features/cart.feature:48&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the cart icon&amp#27;[0m                                           &amp#27;[90m# com.saucedemo.steps.CartSteps.iClickTheCartIcon()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart should be empty&amp#27;[0m                                        &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartShouldBeEmpty()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe Checkout button should be visible&amp#27;[0m                            &amp#27;[90m# com.saucedemo.steps.CartSteps.theCheckoutButtonShouldBeVisible()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-001 Complete checkout with valid information" classname="Checkout" time="2.311">
+    <system-out><![CDATA[
+@checkout @smoke @positive
+Scenario: TC-CHK-001 Complete checkout with valid information                             &amp#27;[90m# features/checkout.feature:13&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                               &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                        &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Finish&amp#27;[0m                                                                      &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickFinish()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the order confirmation &amp#27;[0m&amp#27;[32m&amp#27;[1m"Thank you for your order!"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldSeeOrderConfirmation(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-002 Checkout with empty First Name" classname="Checkout" time="2.304">
+    <system-out><![CDATA[
+@checkout @negative
+Scenario: TC-CHK-002 Checkout with empty First Name                                   &amp#27;[90m# features/checkout.feature:21&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                  &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                           &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the checkout error &amp#27;[0m&amp#27;[32m&amp#27;[1m"Error: First Name is required"&amp#27;[0m                &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-003 Checkout with empty Last Name" classname="Checkout" time="2.113">
+    <system-out><![CDATA[
+@checkout @negative
+Scenario: TC-CHK-003 Checkout with empty Last Name                                     &amp#27;[90m# features/checkout.feature:28&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                   &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                            &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                     &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                 &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the checkout error &amp#27;[0m&amp#27;[32m&amp#27;[1m"Error: Last Name is required"&amp#27;[0m                  &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-004 Checkout with empty Zip Code" classname="Checkout" time="2.172">
+    <system-out><![CDATA[
+@checkout @negative
+Scenario: TC-CHK-004 Checkout with empty Zip Code                                    &amp#27;[90m# features/checkout.feature:35&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m               &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                          &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                   &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                               &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the checkout error &amp#27;[0m&amp#27;[32m&amp#27;[1m"Error: Postal Code is required"&amp#27;[0m              &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-005 Verify price totals on Checkout Overview" classname="Checkout" time="2.397">
+    <system-out><![CDATA[
+@checkout @positive
+Scenario: TC-CHK-005 Verify price totals on Checkout Overview                             &amp#27;[90m# features/checkout.feature:42&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                               &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                        &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe total price should equal the sum of item total and tax&amp#27;[0m                         &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.totalShouldEqualItemTotalPlusTax()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-006 Cancel checkout and return to cart" classname="Checkout" time="2.349">
+    <system-out><![CDATA[
+@checkout @positive
+Scenario: TC-CHK-006 Cancel checkout and return to cart                &amp#27;[90m# features/checkout.feature:49&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                   &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                            &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                     &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Cancel on the checkout information page&amp#27;[0m                  &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCancelOnCheckoutInfo()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the cart page&amp#27;[0m                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldBeOnCartPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe cart badge should show &amp#27;[0m&amp#27;[32m&amp#27;[1m"1"&amp#27;[0m                                   &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-007 Cancel on Checkout Overview and return to inventory" classname="Checkout" time="2.165">
+    <system-out><![CDATA[
+@checkout @positive
+Scenario: TC-CHK-007 Cancel on Checkout Overview and return to inventory                  &amp#27;[90m# features/checkout.feature:56&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                               &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                        &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Cancel on the checkout overview page&amp#27;[0m                                        &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCancelOnOverview()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the inventory page&amp#27;[0m                                                  &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe cart badge should show &amp#27;[0m&amp#27;[32m&amp#27;[1m"1"&amp#27;[0m                                                      &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-CHK-008 Cart is empty after successful order completion" classname="Checkout" time="5.683">
+    <system-out><![CDATA[
+@checkout @positive
+Scenario: TC-CHK-008 Cart is empty after successful order completion                      &amp#27;[90m# features/checkout.feature:65&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the cart page&amp#27;[0m                                                               &amp#27;[90m# com.saucedemo.steps.CartSteps.iAmOnCartPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the Checkout button&amp#27;[0m                                                        &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter checkout information with first name &amp#27;[0m&amp#27;[32m&amp#27;[1m"John"&amp#27;[0m&amp#27;[32m last name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Doe"&amp#27;[0m&amp#27;[32m and zip &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Continue&amp#27;[0m                                                                    &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickContinue()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Finish&amp#27;[0m                                                                      &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickFinish()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Back Home&amp#27;[0m                                                                   &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iClickBackHome()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the inventory page&amp#27;[0m                                                  &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe cart badge should not be visible&amp#27;[0m                                                &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-001 Verify product list loads after login" classname="Product Inventory" time="1.662">
+    <system-out><![CDATA[
+@inventory @smoke @positive
+Scenario: TC-INV-001 Verify product list loads after login                                &amp#27;[90m# features/inventory.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                                          &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1m6&amp#27;[0m&amp#27;[32m products should be displayed&amp#27;[0m                                                     &amp#27;[90m# com.saucedemo.steps.InventorySteps.productsCountShouldBe(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meach product should have an image, name, description, price, and Add to cart button&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.InventorySteps.eachProductShouldHaveRequiredElements()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-002 Sort products by price low to high" classname="Product Inventory" time="1.613">
+    <system-out><![CDATA[
+@inventory @positive
+Scenario: TC-INV-002 Sort products by price low to high                &amp#27;[90m# features/inventory.feature:17&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sort products by &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price (low to high)"&amp#27;[0m                        &amp#27;[90m# com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe first product should have price &amp#27;[0m&amp#27;[32m&amp#27;[1m"$7.99"&amp#27;[0m                     &amp#27;[90m# com.saucedemo.steps.InventorySteps.theFirstProductShouldHavePrice(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-003 Sort products by price high to low" classname="Product Inventory" time="1.704">
+    <system-out><![CDATA[
+@inventory @positive
+Scenario: TC-INV-003 Sort products by price high to low                &amp#27;[90m# features/inventory.feature:22&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sort products by &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price (high to low)"&amp#27;[0m                        &amp#27;[90m# com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe first product should have price &amp#27;[0m&amp#27;[32m&amp#27;[1m"$49.99"&amp#27;[0m                    &amp#27;[90m# com.saucedemo.steps.InventorySteps.theFirstProductShouldHavePrice(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-004 Sort products by name Z to A" classname="Product Inventory" time="1.862">
+    <system-out><![CDATA[
+@inventory @positive
+Scenario: TC-INV-004 Sort products by name Z to A                      &amp#27;[90m# features/inventory.feature:27&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sort products by &amp#27;[0m&amp#27;[32m&amp#27;[1m"Name (Z to A)"&amp#27;[0m                              &amp#27;[90m# com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe products should be in reverse alphabetical order&amp#27;[0m            &amp#27;[90m# com.saucedemo.steps.InventorySteps.productsShouldBeInReverseAlphabeticalOrder()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-005 Navigate to product detail page" classname="Product Inventory" time="1.944">
+    <system-out><![CDATA[
+@inventory @positive
+Scenario: TC-INV-005 Navigate to product detail page                                 &amp#27;[90m# features/inventory.feature:32&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m               &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                                     &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the product named &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m                            &amp#27;[90m# com.saucedemo.steps.InventorySteps.iClickOnProductNamed(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the product detail page&amp#27;[0m                                        &amp#27;[90m# com.saucedemo.steps.InventorySteps.iShouldBeOnProductDetailPage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe product detail should show full description, price, and Add to cart button&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.InventorySteps.productDetailShouldHaveRequiredElements()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-INV-006 Navigate back from product detail to inventory" classname="Product Inventory" time="1.795">
+    <system-out><![CDATA[
+@inventory @positive
+Scenario: TC-INV-006 Navigate back from product detail to inventory    &amp#27;[90m# features/inventory.feature:38&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the product named &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m              &amp#27;[90m# com.saucedemo.steps.InventorySteps.iClickOnProductNamed(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Back to products button&amp#27;[0m                              &amp#27;[90m# com.saucedemo.steps.InventorySteps.iClickBackToProductsButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be on the inventory page&amp#27;[0m                               &amp#27;[90m# com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-NAV-001 Open and close the burger menu" classname="Navigation Menu" time="4.154">
+    <system-out><![CDATA[
+@navigation @smoke @positive
+Scenario: TC-NAV-001 Open and close the burger menu                          &amp#27;[90m# features/navigation.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m       &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                             &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open the navigation menu&amp#27;[0m                                            &amp#27;[90m# com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe menu should display All Items, About, Logout, and Reset App State&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.NavigationSteps.menuShouldDisplayAllItems()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI close the navigation menu&amp#27;[0m                                           &amp#27;[90m# com.saucedemo.steps.NavigationSteps.iCloseNavigationMenu()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe navigation menu should be closed&amp#27;[0m                                  &amp#27;[90m# com.saucedemo.steps.NavigationSteps.navigationMenuShouldBeClosed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TC-NAV-002 Reset App State clears the cart" classname="Navigation Menu" time="6.359">
+    <system-out><![CDATA[
+@navigation @positive
+Scenario: TC-NAV-002 Reset App State clears the cart                   &amp#27;[90m# features/navigation.feature:19&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am logged in as &amp#27;[0m&amp#27;[32m&amp#27;[1m"standard_user"&amp#27;[0m&amp#27;[32m with password &amp#27;[0m&amp#27;[32m&amp#27;[1m"secret_sauce"&amp#27;[0m &amp#27;[90m# com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the inventory page&amp#27;[0m                                       &amp#27;[90m# com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Backpack"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI have added &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sauce Labs Bike Light"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                 &amp#27;[90m# com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open the navigation menu&amp#27;[0m                                      &amp#27;[90m# com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click Reset App State&amp#27;[0m                                          &amp#27;[90m# com.saucedemo.steps.NavigationSteps.iClickResetAppState()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart badge should not be visible&amp#27;[0m                            &amp#27;[90m# com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mall Add to cart buttons should be reset&amp#27;[0m                          &amp#27;[90m# com.saucedemo.steps.NavigationSteps.allAddToCartButtonsShouldBeReset()&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,323 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.saucedemo:saucedemo-ui-automation >----------------
+[INFO] Building saucedemo-ui-automation 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ saucedemo-ui-automation ---
+[INFO] Deleting /Users/edy/.jenkins/workspace/Web UI Automation Creation/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ saucedemo-ui-automation ---
+[INFO] skip non existing resourceDirectory /Users/edy/.jenkins/workspace/Web UI Automation Creation/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ saucedemo-ui-automation ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ saucedemo-ui-automation ---
+[INFO] Copying 6 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ saucedemo-ui-automation ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug target 17] to target/test-classes
+[WARNING] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ saucedemo-ui-automation ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.saucedemo.runner.TestRunner
+
+@auth @smoke @positive
+Scenario: TC-AUTH-001 Successful login with valid credentials       # features/authentication.feature:11
+  Given I am on the login page                                      # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "standard_user" and password "secret_sauce" # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                      # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should be redirected to the inventory page                 # com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToInventoryPage()
+  And the product list should be displayed                          # com.saucedemo.steps.AuthSteps.theProductListShouldBeDisplayed()
+
+@auth @negative
+Scenario: TC-AUTH-002 Login with invalid password                                                                 # features/authentication.feature:18
+  Given I am on the login page                                                                                    # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "standard_user" and password "wrongpassword"                                              # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                                                                    # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Username and password do not match any user in this service" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+  And I should remain on the login page                                                                           # com.saucedemo.steps.AuthSteps.iShouldRemainOnLoginPage()
+
+@auth @negative
+Scenario: TC-AUTH-003 Login with invalid username                                                                 # features/authentication.feature:25
+  Given I am on the login page                                                                                    # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "unknown_user" and password "secret_sauce"                                                # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                                                                    # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Username and password do not match any user in this service" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@auth @negative
+Scenario: TC-AUTH-004 Login with empty username field                      # features/authentication.feature:31
+  Given I am on the login page                                             # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "" and password "secret_sauce"                     # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                             # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Username is required" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@auth @negative
+Scenario: TC-AUTH-005 Login with empty password field                      # features/authentication.feature:37
+  Given I am on the login page                                             # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "standard_user" and password ""                    # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                             # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Password is required" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@auth @negative @edge
+Scenario: TC-AUTH-006 Login with both fields empty                         # features/authentication.feature:43
+  Given I am on the login page                                             # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I click the Login button                                            # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Username is required" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@auth @negative
+Scenario: TC-AUTH-007 Login attempt with locked-out user                                   # features/authentication.feature:48
+  Given I am on the login page                                                             # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  When I enter username "locked_out_user" and password "secret_sauce"                      # com.saucedemo.steps.AuthSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  And I click the Login button                                                             # com.saucedemo.steps.AuthSteps.iClickTheLoginButton()
+  Then I should see the error message "Epic sadface: Sorry, this user has been locked out" # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@auth @positive
+Scenario: TC-AUTH-008 Successful logout                                # features/authentication.feature:54
+  Given I am on the login page                                         # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  When I open the navigation menu                                      # com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()
+  And I click Logout                                                   # com.saucedemo.steps.AuthSteps.iClickLogout()
+  Then I should be redirected to the login page                        # com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToLoginPage()
+
+@auth @negative @security
+Scenario: TC-AUTH-009 Access inventory page without authentication                                                 # features/authentication.feature:61
+  Given I am on the login page                                                                                     # com.saucedemo.steps.AuthSteps.iAmOnTheLoginPage()
+  Given I am not logged in                                                                                         # com.saucedemo.steps.AuthSteps.iAmNotLoggedIn()
+  When I navigate directly to "/inventory.html"                                                                    # com.saucedemo.steps.AuthSteps.iNavigateDirectlyTo(java.lang.String)
+  Then I should be redirected to the login page                                                                    # com.saucedemo.steps.AuthSteps.iShouldBeRedirectedToLoginPage()
+  And I should see the error message "Epic sadface: You can only access '/inventory.html' when you are logged in." # com.saucedemo.steps.AuthSteps.iShouldSeeErrorMessage(java.lang.String)
+
+@cart @smoke @positive
+Scenario: TC-CART-001 Add a single product to cart                     # features/cart.feature:12
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I add "Sauce Labs Backpack" to the cart                         # com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)
+  Then the cart badge should show "1"                                  # com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)
+  And the "Sauce Labs Backpack" button should change to "Remove"       # com.saucedemo.steps.CartSteps.theButtonShouldChangeTo(java.lang.String,java.lang.String)
+
+@cart @positive
+Scenario: TC-CART-002 Add multiple products to cart                    # features/cart.feature:18
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I add "Sauce Labs Backpack" to the cart                         # com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)
+  And I add "Sauce Labs Bike Light" to the cart                        # com.saucedemo.steps.CartSteps.iAddProductToCart(java.lang.String)
+  And I click the cart icon                                            # com.saucedemo.steps.CartSteps.iClickTheCartIcon()
+  Then the cart page should show 2 items                               # com.saucedemo.steps.CartSteps.theCartPageShouldShowItems(int)
+  And the cart badge should show "2"                                   # com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)
+
+@cart @positive
+Scenario: TC-CART-003 Remove a product from the inventory page         # features/cart.feature:26
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  Given I have added "Sauce Labs Backpack" to the cart                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  When I click Remove for "Sauce Labs Backpack" on the inventory page  # com.saucedemo.steps.CartSteps.iClickRemoveOnInventoryPage(java.lang.String)
+  Then the cart badge should not be visible                            # com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()
+  And the "Sauce Labs Backpack" button should change to "Add to cart"  # com.saucedemo.steps.CartSteps.theButtonShouldChangeTo(java.lang.String,java.lang.String)
+
+@cart @positive
+Scenario: TC-CART-004 Remove a product from the cart page              # features/cart.feature:33
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  Given I have added "Sauce Labs Backpack" to the cart                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  When I click the cart icon                                           # com.saucedemo.steps.CartSteps.iClickTheCartIcon()
+  And I remove "Sauce Labs Backpack" from the cart page                # com.saucedemo.steps.CartSteps.iRemoveFromCartPage(java.lang.String)
+  Then the cart should be empty                                        # com.saucedemo.steps.CartSteps.theCartShouldBeEmpty()
+
+@cart @positive
+Scenario: TC-CART-005 Continue shopping from cart page                 # features/cart.feature:40
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  Given I have added "Sauce Labs Backpack" to the cart                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  When I click the cart icon                                           # com.saucedemo.steps.CartSteps.iClickTheCartIcon()
+  And I click Continue Shopping                                        # com.saucedemo.steps.CartSteps.iClickContinueShopping()
+  Then I should be on the inventory page                               # com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()
+  And the cart badge should show "1"                                   # com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)
+
+@cart @edge
+Scenario: TC-CART-006 View empty cart                                  # features/cart.feature:48
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I click the cart icon                                           # com.saucedemo.steps.CartSteps.iClickTheCartIcon()
+  Then the cart should be empty                                        # com.saucedemo.steps.CartSteps.theCartShouldBeEmpty()
+  And the Checkout button should be visible                            # com.saucedemo.steps.CartSteps.theCheckoutButtonShouldBeVisible()
+
+@checkout @smoke @positive
+Scenario: TC-CHK-001 Complete checkout with valid information                             # features/checkout.feature:13
+  Given I am logged in as "standard_user" with password "secret_sauce"                    # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                      # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                               # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                        # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "Doe" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                    # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  And I click Finish                                                                      # com.saucedemo.steps.CheckoutSteps.iClickFinish()
+  Then I should see the order confirmation "Thank you for your order!"                    # com.saucedemo.steps.CheckoutSteps.iShouldSeeOrderConfirmation(java.lang.String)
+
+@checkout @negative
+Scenario: TC-CHK-002 Checkout with empty First Name                                   # features/checkout.feature:21
+  Given I am logged in as "standard_user" with password "secret_sauce"                # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                  # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                           # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                    # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "" last name "Doe" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  Then I should see the checkout error "Error: First Name is required"                # com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)
+
+@checkout @negative
+Scenario: TC-CHK-003 Checkout with empty Last Name                                     # features/checkout.feature:28
+  Given I am logged in as "standard_user" with password "secret_sauce"                 # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                   # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                            # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                     # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                 # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  Then I should see the checkout error "Error: Last Name is required"                  # com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)
+
+@checkout @negative
+Scenario: TC-CHK-004 Checkout with empty Zip Code                                    # features/checkout.feature:35
+  Given I am logged in as "standard_user" with password "secret_sauce"               # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                          # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                   # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "Doe" and zip "" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                               # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  Then I should see the checkout error "Error: Postal Code is required"              # com.saucedemo.steps.CheckoutSteps.iShouldSeeCheckoutError(java.lang.String)
+
+@checkout @positive
+Scenario: TC-CHK-005 Verify price totals on Checkout Overview                             # features/checkout.feature:42
+  Given I am logged in as "standard_user" with password "secret_sauce"                    # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                      # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                               # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                        # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "Doe" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                    # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  Then the total price should equal the sum of item total and tax                         # com.saucedemo.steps.CheckoutSteps.totalShouldEqualItemTotalPlusTax()
+
+@checkout @positive
+Scenario: TC-CHK-006 Cancel checkout and return to cart                # features/checkout.feature:49
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                   # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                            # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                     # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I click Cancel on the checkout information page                  # com.saucedemo.steps.CheckoutSteps.iClickCancelOnCheckoutInfo()
+  Then I should be on the cart page                                    # com.saucedemo.steps.CheckoutSteps.iShouldBeOnCartPage()
+  And the cart badge should show "1"                                   # com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)
+
+@checkout @positive
+Scenario: TC-CHK-007 Cancel on Checkout Overview and return to inventory                  # features/checkout.feature:56
+  Given I am logged in as "standard_user" with password "secret_sauce"                    # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                      # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                               # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                        # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "Doe" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                    # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  And I click Cancel on the checkout overview page                                        # com.saucedemo.steps.CheckoutSteps.iClickCancelOnOverview()
+  Then I should be on the inventory page                                                  # com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()
+  And the cart badge should show "1"                                                      # com.saucedemo.steps.CartSteps.theCartBadgeShouldShow(java.lang.String)
+
+@checkout @positive
+Scenario: TC-CHK-008 Cart is empty after successful order completion                      # features/checkout.feature:65
+  Given I am logged in as "standard_user" with password "secret_sauce"                    # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I have added "Sauce Labs Backpack" to the cart                                      # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I am on the cart page                                                               # com.saucedemo.steps.CartSteps.iAmOnCartPage()
+  When I click the Checkout button                                                        # com.saucedemo.steps.CheckoutSteps.iClickCheckoutButton()
+  And I enter checkout information with first name "John" last name "Doe" and zip "12345" # com.saucedemo.steps.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  And I click Continue                                                                    # com.saucedemo.steps.CheckoutSteps.iClickContinue()
+  And I click Finish                                                                      # com.saucedemo.steps.CheckoutSteps.iClickFinish()
+  And I click Back Home                                                                   # com.saucedemo.steps.CheckoutSteps.iClickBackHome()
+  Then I should be on the inventory page                                                  # com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()
+  And the cart badge should not be visible                                                # com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()
+
+@inventory @smoke @positive
+Scenario: TC-INV-001 Verify product list loads after login                                # features/inventory.feature:12
+  Given I am logged in as "standard_user" with password "secret_sauce"                    # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                                          # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  Then 6 products should be displayed                                                     # com.saucedemo.steps.InventorySteps.productsCountShouldBe(int)
+  And each product should have an image, name, description, price, and Add to cart button # com.saucedemo.steps.InventorySteps.eachProductShouldHaveRequiredElements()
+
+@inventory @positive
+Scenario: TC-INV-002 Sort products by price low to high                # features/inventory.feature:17
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I sort products by "Price (low to high)"                        # com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)
+  Then the first product should have price "$7.99"                     # com.saucedemo.steps.InventorySteps.theFirstProductShouldHavePrice(java.lang.String)
+
+@inventory @positive
+Scenario: TC-INV-003 Sort products by price high to low                # features/inventory.feature:22
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I sort products by "Price (high to low)"                        # com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)
+  Then the first product should have price "$49.99"                    # com.saucedemo.steps.InventorySteps.theFirstProductShouldHavePrice(java.lang.String)
+
+@inventory @positive
+Scenario: TC-INV-004 Sort products by name Z to A                      # features/inventory.feature:27
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I sort products by "Name (Z to A)"                              # com.saucedemo.steps.InventorySteps.iSortProductsBy(java.lang.String)
+  Then the products should be in reverse alphabetical order            # com.saucedemo.steps.InventorySteps.productsShouldBeInReverseAlphabeticalOrder()
+
+@inventory @positive
+Scenario: TC-INV-005 Navigate to product detail page                                 # features/inventory.feature:32
+  Given I am logged in as "standard_user" with password "secret_sauce"               # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                                     # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I click on the product named "Sauce Labs Backpack"                            # com.saucedemo.steps.InventorySteps.iClickOnProductNamed(java.lang.String)
+  Then I should be on the product detail page                                        # com.saucedemo.steps.InventorySteps.iShouldBeOnProductDetailPage()
+  And the product detail should show full description, price, and Add to cart button # com.saucedemo.steps.InventorySteps.productDetailShouldHaveRequiredElements()
+
+@inventory @positive
+Scenario: TC-INV-006 Navigate back from product detail to inventory    # features/inventory.feature:38
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I click on the product named "Sauce Labs Backpack"              # com.saucedemo.steps.InventorySteps.iClickOnProductNamed(java.lang.String)
+  And I click the Back to products button                              # com.saucedemo.steps.InventorySteps.iClickBackToProductsButton()
+  Then I should be on the inventory page                               # com.saucedemo.steps.CheckoutSteps.iShouldBeOnInventoryPage()
+
+@navigation @smoke @positive
+Scenario: TC-NAV-001 Open and close the burger menu                          # features/navigation.feature:12
+  Given I am logged in as "standard_user" with password "secret_sauce"       # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                             # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  When I open the navigation menu                                            # com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()
+  Then the menu should display All Items, About, Logout, and Reset App State # com.saucedemo.steps.NavigationSteps.menuShouldDisplayAllItems()
+  When I close the navigation menu                                           # com.saucedemo.steps.NavigationSteps.iCloseNavigationMenu()
+  Then the navigation menu should be closed                                  # com.saucedemo.steps.NavigationSteps.navigationMenuShouldBeClosed()
+
+@navigation @positive
+Scenario: TC-NAV-002 Reset App State clears the cart                   # features/navigation.feature:19
+  Given I am logged in as "standard_user" with password "secret_sauce" # com.saucedemo.steps.AuthSteps.iAmLoggedInAs(java.lang.String,java.lang.String)
+  And I am on the inventory page                                       # com.saucedemo.steps.InventorySteps.iAmOnInventoryPage()
+  Given I have added "Sauce Labs Backpack" to the cart                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  And I have added "Sauce Labs Bike Light" to the cart                 # com.saucedemo.steps.CartSteps.iHaveAddedProductToCart(java.lang.String)
+  When I open the navigation menu                                      # com.saucedemo.steps.NavigationSteps.iOpenNavigationMenu()
+  And I click Reset App State                                          # com.saucedemo.steps.NavigationSteps.iClickResetAppState()
+  Then the cart badge should not be visible                            # com.saucedemo.steps.CartSteps.theCartBadgeShouldNotBeVisible()
+  And all Add to cart buttons should be reset                          # com.saucedemo.steps.NavigationSteps.allAddToCartButtonsShouldBeReset()
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 73.49 s -- in com.saucedemo.runner.TestRunner
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ saucedemo-ui-automation ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /Users/edy/.jenkins/workspace/Web UI Automation Creation/target/saucedemo-ui-automation-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:15 min
+[INFO] Finished at: 2026-06-29T23:46:00+07:00
+[INFO] ------------------------------------------------------------------------

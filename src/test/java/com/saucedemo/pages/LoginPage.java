@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
     }
 
     public void navigateToLoginPage() {
-        navigateTo(BASE_URL);
+        page.navigate(BASE_URL);
     }
 
     public void navigateTo(String path) {
