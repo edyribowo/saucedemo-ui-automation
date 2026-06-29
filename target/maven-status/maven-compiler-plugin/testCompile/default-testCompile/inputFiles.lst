@@ -1,0 +1,6 @@
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/client/BaseApiClient.java
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/context/ScenarioContext.java
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/runner/CucumberTestRunner.java
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/stepdefs/CommonSteps.java
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/stepdefs/CreateUserSteps.java
+/Users/edy/.jenkins/workspace/Web UI Automation Creation/src/test/java/com/reqres/stepdefs/ListUsersSteps.java
