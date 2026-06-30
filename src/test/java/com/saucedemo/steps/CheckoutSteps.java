@@ -50,12 +50,12 @@ public class CheckoutSteps {
 
     @And("I click Cancel on the checkout information page")
     public void iClickCancelOnCheckoutInfo() {
-        checkoutPage.clickCancel();
+        checkoutPage.clickCancelOnInfo();
     }
 
     @And("I click Cancel on the checkout overview page")
     public void iClickCancelOnOverview() {
-        checkoutPage.clickCancel();
+        checkoutPage.clickCancelOnOverview();
     }
 
     @Then("I should see the order confirmation {string}")

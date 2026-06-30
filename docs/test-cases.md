@@ -1,7 +1,3 @@
-No specific feature was provided, so I'll generate comprehensive test cases covering all major features of Swag Labs (saucedemo.com) — Login, Inventory, Cart, and Checkout.
-
----
-
 # Test Cases — Swag Labs (saucedemo.com)
 
 > **App URL:** https://www.saucedemo.com/

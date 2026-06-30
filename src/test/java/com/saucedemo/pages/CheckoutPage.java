@@ -61,6 +61,14 @@ public class CheckoutPage extends BasePage {
         click(cancelButton);
     }
 
+    public void clickCancelOnInfo() {
+        click(cancelButton);
+    }
+
+    public void clickCancelOnOverview() {
+        click(cancelButton);
+    }
+
     public void clickFinish() {
         click(finishButton);
     }

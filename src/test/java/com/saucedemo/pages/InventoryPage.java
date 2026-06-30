@@ -17,10 +17,10 @@ public class InventoryPage extends BasePage {
 
     public InventoryPage(Page page) {
         super(page);
-        inventoryItems = page.locator(".inventory_item");
-        sortDropdown = page.locator(".product_sort_container");
-        cartBadge = page.locator(".shopping_cart_badge");
-        cartIcon = page.locator(".shopping_cart_link");
+        inventoryItems = page.locator("[data-test='inventory-item']");
+        sortDropdown = page.locator("[data-test='product-sort-container']");
+        cartBadge = page.locator("[data-test='shopping-cart-badge']");
+        cartIcon = page.locator("[data-test='shopping-cart-link']");
     }
 
     public boolean isOnInventoryPage() {
@@ -37,9 +37,9 @@ public class InventoryPage extends BasePage {
         for (int i = 0; i < count; i++) {
             Locator item = inventoryItems.nth(i);
             if (item.locator(".inventory_item_img img").count() == 0) return false;
-            if (item.locator(".inventory_item_name").count() == 0) return false;
-            if (item.locator(".inventory_item_desc").count() == 0) return false;
-            if (item.locator(".inventory_item_price").count() == 0) return false;
+            if (item.locator("[data-test='inventory-item-name']").count() == 0) return false;
+            if (item.locator("[data-test='inventory-item-desc']").count() == 0) return false;
+            if (item.locator("[data-test='inventory-item-price']").count() == 0) return false;
             if (item.locator("button").count() == 0) return false;
         }
         return true;
@@ -50,15 +50,15 @@ public class InventoryPage extends BasePage {
     }
 
     public String getFirstProductPrice() {
-        return getText(inventoryItems.first().locator(".inventory_item_price"));
+        return getText(inventoryItems.first().locator("[data-test='inventory-item-price']"));
     }
 
     public List<String> getAllProductNames() {
-        return page.locator(".inventory_item_name").allInnerTexts();
+        return page.locator("[data-test='inventory-item-name']").allInnerTexts();
     }
 
     public void clickProductByName(String productName) {
-        click(page.locator(".inventory_item_name", new Page.LocatorOptions().setHasText(productName)));
+        click(page.locator("[data-test='inventory-item-name']", new Page.LocatorOptions().setHasText(productName)));
     }
 
     public void addToCart(String productName) {
@@ -88,12 +88,12 @@ public class InventoryPage extends BasePage {
     }
 
     public boolean allAddToCartButtonsReset() {
-        List<String> buttonTexts = page.locator(".inventory_item button").allInnerTexts();
+        List<String> buttonTexts = page.locator("[data-test='inventory-item'] button").allInnerTexts();
         return buttonTexts.stream().allMatch(t -> t.equalsIgnoreCase("Add to cart"));
     }
 
     private Locator getItemByName(String productName) {
-        return page.locator(".inventory_item")
+        return page.locator("[data-test='inventory-item']")
                 .filter(new Locator.FilterOptions().setHasText(productName));
     }
 }
