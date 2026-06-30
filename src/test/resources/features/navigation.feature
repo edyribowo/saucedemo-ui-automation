@@ -4,6 +4,7 @@ Feature: Navigation Menu
   I want to use the navigation menu
   So that I can access key application functions
 
+  # Note: credentials are public demo accounts for https://www.saucedemo.com/ — not real/sensitive data.
   Background:
     Given I am logged in as "standard_user" with password "secret_sauce"
     And I am on the inventory page

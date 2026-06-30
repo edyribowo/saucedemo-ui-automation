@@ -4,6 +4,7 @@ Feature: Checkout
   I want to complete the checkout process
   So that I can place my order
 
+  # Note: credentials are public demo accounts for https://www.saucedemo.com/ — not real/sensitive data.
   Background:
     Given I am logged in as "standard_user" with password "secret_sauce"
     And I have added "Sauce Labs Backpack" to the cart

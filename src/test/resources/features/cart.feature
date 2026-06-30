@@ -4,6 +4,7 @@ Feature: Shopping Cart
   I want to manage items in my shopping cart
   So that I can prepare my order before checkout
 
+  # Note: credentials are public demo accounts for https://www.saucedemo.com/ — not real/sensitive data.
   Background:
     Given I am logged in as "standard_user" with password "secret_sauce"
     And I am on the inventory page

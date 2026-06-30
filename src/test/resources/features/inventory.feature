@@ -4,6 +4,7 @@ Feature: Product Inventory
   I want to browse and sort the product catalog
   So that I can find items I want to purchase
 
+  # Note: credentials are public demo accounts for https://www.saucedemo.com/ — not real/sensitive data.
   Background:
     Given I am logged in as "standard_user" with password "secret_sauce"
     And I am on the inventory page

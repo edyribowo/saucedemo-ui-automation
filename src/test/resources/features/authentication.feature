@@ -4,6 +4,8 @@ Feature: Authentication
   I want to be able to log in and log out securely
   So that I can access the product inventory
 
+  # Note: credentials below are public demo accounts for https://www.saucedemo.com/ — not real/sensitive data.
+
   Background:
     Given I am on the login page
 
