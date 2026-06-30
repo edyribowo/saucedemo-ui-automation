@@ -1,0 +1,6 @@
+target/
+build-output.txt
+*.class
+.idea/
+*.iml
+.DS_Store
