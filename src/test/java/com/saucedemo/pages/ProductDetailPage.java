@@ -25,8 +25,12 @@ public class ProductDetailPage extends BasePage {
         return page.url().contains("/inventory-item.html");
     }
 
+    public String getProductName() {
+        return getText(productName);
+    }
+
     public boolean hasRequiredElements() {
-        return isVisible(productDescription) && isVisible(productPrice) && isVisible(addToCartButton);
+        return isVisible(productName) && isVisible(productDescription) && isVisible(productPrice) && isVisible(addToCartButton);
     }
 
     public void clickBackToProducts() {

@@ -6,6 +6,8 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 public abstract class BasePage {
 
+    protected static final String BASE_URL = System.getProperty("base.url", "https://www.saucedemo.com/");
+
     protected final Page page;
     private static final int DEFAULT_TIMEOUT_MS = 10_000;
 

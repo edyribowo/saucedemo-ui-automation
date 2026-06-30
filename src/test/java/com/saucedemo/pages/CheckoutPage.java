@@ -61,14 +61,6 @@ public class CheckoutPage extends BasePage {
         click(cancelButton);
     }
 
-    public void clickCancelOnInfo() {
-        click(cancelButton);
-    }
-
-    public void clickCancelOnOverview() {
-        click(cancelButton);
-    }
-
     public void clickFinish() {
         click(finishButton);
     }
@@ -102,6 +94,7 @@ public class CheckoutPage extends BasePage {
     }
 
     private double parsePrice(String text) {
-        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+        String trimmed = text.substring(text.indexOf('$') + 1).trim();
+        return Double.parseDouble(trimmed);
     }
 }

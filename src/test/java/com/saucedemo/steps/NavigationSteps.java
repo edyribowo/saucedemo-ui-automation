@@ -46,6 +46,7 @@ public class NavigationSteps {
     @And("I click Reset App State")
     public void iClickResetAppState() {
         navigationMenuPage.clickResetAppState();
+        Hooks.getPage().reload();
     }
 
     @Then("all Add to cart buttons should be reset")

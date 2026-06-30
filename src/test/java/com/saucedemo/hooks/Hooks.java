@@ -19,9 +19,13 @@ public class Hooks {
         Playwright playwright = Playwright.create();
         boolean headless = Boolean.parseBoolean(System.getProperty("playwright.headless", "true"));
         int slowMo = Integer.parseInt(System.getProperty("playwright.slowmo", "0"));
-        Browser browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(slowMo)
-        );
+        String browserName = System.getProperty("browser", "chromium").toLowerCase();
+        BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(slowMo);
+        Browser browser = switch (browserName) {
+            case "firefox" -> playwright.firefox().launch(launchOptions);
+            case "webkit" -> playwright.webkit().launch(launchOptions);
+            default -> playwright.chromium().launch(launchOptions);
+        };
         BrowserContext context = browser.newContext(
                 new Browser.NewContextOptions().setViewportSize(1280, 800)
         );

@@ -6,8 +6,6 @@ import com.saucedemo.base.BasePage;
 
 public class LoginPage extends BasePage {
 
-    private static final String BASE_URL = "https://www.saucedemo.com/";
-
     private final Locator usernameInput;
     private final Locator passwordInput;
     private final Locator loginButton;
@@ -56,6 +54,6 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isOnLoginPage() {
-        return page.url().equals(BASE_URL) || page.url().contains("index.html");
+        return page.url().equals(BASE_URL) || page.url().equals(BASE_URL + "index.html") || page.url().contains("index.html");
     }
 }

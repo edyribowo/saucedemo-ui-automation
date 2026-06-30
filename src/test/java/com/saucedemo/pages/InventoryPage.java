@@ -8,8 +8,6 @@ import java.util.List;
 
 public class InventoryPage extends BasePage {
 
-    private static final String INVENTORY_URL = "https://www.saucedemo.com/inventory.html";
-
     private final Locator inventoryItems;
     private final Locator sortDropdown;
     private final Locator cartBadge;

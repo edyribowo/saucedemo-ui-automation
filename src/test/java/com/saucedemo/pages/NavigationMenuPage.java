@@ -48,6 +48,5 @@ public class NavigationMenuPage extends BasePage {
 
     public void clickResetAppState() {
         click(resetAppStateLink);
-        page.reload();
     }
 }
