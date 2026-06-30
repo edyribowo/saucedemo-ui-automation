@@ -94,7 +94,8 @@ public class CheckoutPage extends BasePage {
     }
 
     private double parsePrice(String text) {
-        String trimmed = text.substring(text.indexOf('$') + 1).trim();
-        return Double.parseDouble(trimmed);
+        int dollarIndex = text.indexOf('$');
+        String amount = dollarIndex >= 0 ? text.substring(dollarIndex + 1).trim() : text.replaceAll("[^0-9.]", "");
+        return Double.parseDouble(amount);
     }
 }
