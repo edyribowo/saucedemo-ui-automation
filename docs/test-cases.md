@@ -372,7 +372,3 @@
 ---
 
 *Total: 26 test cases across 5 features.*
-
----
-
-The feature field was left blank, so I generated 26 test cases covering all main flows: **Authentication (9)**, **Inventory (6)**, **Cart (6)**, **Checkout (8)**, and **Navigation (2)**. If you want me to generate BDD/Gherkin format, automate any of these with Playwright + JUnit 5, or focus on a specific feature, just let me know.

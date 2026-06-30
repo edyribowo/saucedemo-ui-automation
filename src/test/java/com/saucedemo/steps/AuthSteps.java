@@ -39,7 +39,9 @@ public class AuthSteps {
     @Given("I am not logged in")
     public void iAmNotLoggedIn() {
         // Relies on a fresh BrowserContext per scenario (managed by Hooks) — no explicit session clearing needed
-        loginPage.navigateToLoginPage();
+        if (!loginPage.isOnLoginPage()) {
+            loginPage.navigateToLoginPage();
+        }
     }
 
     @When("I enter username {string} and password {string}")

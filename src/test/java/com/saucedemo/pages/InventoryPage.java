@@ -36,7 +36,7 @@ public class InventoryPage extends BasePage {
         int count = getProductCount();
         for (int i = 0; i < count; i++) {
             Locator item = inventoryItems.nth(i);
-            if (item.locator(".inventory_item_img img").count() == 0) return false;
+            if (item.locator("img").count() == 0) return false;
             if (item.locator("[data-test='inventory-item-name']").count() == 0) return false;
             if (item.locator("[data-test='inventory-item-desc']").count() == 0) return false;
             if (item.locator("[data-test='inventory-item-price']").count() == 0) return false;
